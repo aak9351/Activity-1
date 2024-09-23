@@ -7,7 +7,7 @@ def center():
        Arguments: None
     """
     turta.up()
-    turta.goto(-300,0)
+    turta.goto(-275,-100)
     turta.down()
     turta.fd(length_table/2)
     turta.left(90)
@@ -26,7 +26,7 @@ def table_top(length_table, width_top, color_table):
        color_table: color of the top of the table
     """
     turta.up()
-    turta.goto(-300,0)
+    turta.goto(-275,-100)
     turta.down()
     #Creates table top
     turta.begin_fill()
@@ -243,7 +243,8 @@ def main():
         colorcake = input("Which color you want to your cake: ")
     sc = Screen()
     turta = Turtle()
-    turta.speed(100)
+    sc.bgcolor("skyblue")
+    turta.speed(10)
     table_top(length_table, width_top, color_table) #Draws the the top of the table
     turta.fd(length_table*0.08)
     table_leg(width_leg, height_leg, color_leg) #Draws first leg
@@ -257,7 +258,9 @@ def main():
     plate(plate_size, plate_color)#Draws the table
     draw_layers(num_layers)#draws the cake
     turta.up()
-    turta.goto(-300,0)#Goes back to original position
+    turta.color("black")
+    turta.goto(-275,-100)#Goes back to original position
+    turta.right(180)
     turta.down()
 
     sc.exitonclick()
